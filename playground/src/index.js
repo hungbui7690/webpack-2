@@ -1,21 +1,24 @@
 /*
-  Why Do We Use Build Tools
+  Webpack Installation and Configuration
   - pic
 
-  Javascript Modules
-  - pic
+  - npm install --save-dev webpack@2.2.0-rc.0
+  - create webpack.config.js
 
-  The Purpose of Webpack
-  - pic 
+  - Entry Point Config: 
+    + start that entry file
+    + use that entry file to build modules around it
 
-  Webpack in Action
-  - pic
+
+  - when we install webpack globally > we just have only 1 version of webpack 
+  - locally: depends on each project, we will have multiple versions of webpack
+
+
+  - package.json
+      "build": "webpack"
+
+  - npm run build
   
-  - npm init -y
-  - src/ 
-  - create 2 files
-      (***) index.js depends on sum.js 
-
 */
 
 const sum = require('./sum')
