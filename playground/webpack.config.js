@@ -17,11 +17,15 @@ const config = {
         test: /\.css$/i,
         use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
-
-      // ***
       {
         test: /\.(jpe?g|png|gif|svg)$/,
-        use: ['url-loader', 'image-webpack-loader'], // the one on the right side is the one should be executed first
+        use: [
+          {
+            loader: 'url-loader',
+            options: { limit: 40000 }, // less than 40000, add the file directly to bundled.js
+          },
+          'image-webpack-loader',
+        ],
       },
     ],
   },
