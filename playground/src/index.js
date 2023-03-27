@@ -1,19 +1,21 @@
 /*
-  Code Splitting Intro
+  On Demand Code Loading
   - pic
 
-///////////////////////////////////
+  - image_viewer.js
+  - index.js
 
-  Code Splitting in Practice
-  - pic: what we will build 
-    > when first load, load index.js 
-    > after click > load other file
 
+  (***) if the image_view.js depends on many dependencies > it will be import as well
+  (***) System.import() return promise (DEPRECATED)
+    > return import().then()
 */
 
-// ***
 const button = document.createElement('button')
 button.innerText = 'Click Me'
-button.onclick = () => {}
+button.onclick = () => {
+  // *** this will load the file when click on the button
+  return import('./image_viewer.js').then((module) => console.log(module))
+}
 
 document.body.appendChild(button)
