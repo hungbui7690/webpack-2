@@ -1,3 +1,3 @@
 const sum = (a, b) => a + b
 
-export default sum // ES6
+export default sum

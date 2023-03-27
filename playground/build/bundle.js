@@ -1,4 +1,1 @@
-;(() => {
-  'use strict'
-  console.log(15)
-})()
+(()=>{var r={821:()=>{var r=document.createElement("img");r.src="https://picsum.photos/400",document.body.appendChild(r)}},t={};function e(o){var s=t[o];if(void 0!==s)return s.exports;var n=t[o]={exports:{}};return r[o](n,n.exports,e),n.exports}(()=>{"use strict";e(821);var r=10+5;console.log(r)})()})();
