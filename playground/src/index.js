@@ -1,21 +1,16 @@
 /*
-  On Demand Code Loading
-  - pic
+  System Import Calls
+  - check network tab > when refresh > only load 1 js file 
+    > after click on the button > load another js file
 
-  - image_viewer.js
-  - index.js
-
-
-  (***) if the image_view.js depends on many dependencies > it will be import as well
-  (***) System.import() return promise (DEPRECATED)
-    > return import().then()
 */
 
 const button = document.createElement('button')
 button.innerText = 'Click Me'
 button.onclick = () => {
-  // *** this will load the file when click on the button
-  return import('./image_viewer.js').then((module) => console.log(module))
+  return import('./image_viewer.js').then((module) => {
+    module.default() // run the function on image_viewer.js
+  })
 }
 
 document.body.appendChild(button)
