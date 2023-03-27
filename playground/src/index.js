@@ -1,18 +1,17 @@
 /*
-  The Style and CSS Loaders
-  - create styles/image_viewer.css
-  - import 
+  The Extract Text Plugin
+  - loading css and javascript in a single file takes long time since we did not utilize the parallel loading feature from the browser
+    > we need to tweak webpack a little bit 
 
-  (***) without config, webpack cannot recognize .css file
-    > need to install 2 packages: 
-      + css-loader
-      + style-loader
 
-  > npm install --save-dev css-loader style-loader
+  (***) Instructor > DEPRECATED > https://github.com/webpack-contrib/mini-css-extract-plugin
+    > as suggestion, we should use: mini-css-extract-plugin
+      > npm install --save-dev mini-css-extract-plugin
   - webpack.config.js
 
-  (***) after build, we inspect > webpack creates the style tag and add the style there
-    > we think that it will bundle into 1 single css file, but not > it will create a style tag and add the style there
+
+  - index.html > link to the new style file > build/style.css
+
 
 */
 

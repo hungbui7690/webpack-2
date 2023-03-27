@@ -1,4 +1,5 @@
 const path = require('path')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin') // (1)
 
 const config = {
   entry: './src/index.js',
@@ -13,13 +14,20 @@ const config = {
         test: /\.js$/,
       },
 
-      // ***
+      // (3) remove the last config (style-loader), but use this one instead
       {
-        use: ['style-loader', 'css-loader'], // css-loader will process, then it will be sent to style-loader
-        test: /\.css$/,
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
     ],
   },
+
+  // (2) save as style.css
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: 'style.css',
+    }),
+  ],
 }
 
 module.exports = config
