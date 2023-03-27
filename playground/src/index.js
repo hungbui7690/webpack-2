@@ -1,12 +1,10 @@
 /*
-  Babel Configuration
-  - create .babelrc
-    > this is the config file for babel only
-    > for later version of webpack, we can config babel directly in webpack.config.js 
-    > here is just for learning purposes
+  Refactor to ES2015 Modules
+  - sum.js
+
 */
 
-const sum = require('./sum')
+import sum from './sum' // ES6
 
 const total = sum(10, 5)
 console.log(total)
