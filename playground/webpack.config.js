@@ -6,12 +6,11 @@ const config = {
     path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js',
   },
-
-  // *** rules === loaders > can use interchangeably
   module: {
     rules: [
       {
         use: 'babel-loader',
+        test: /\.js$/, // files end with .js
       },
     ],
   },

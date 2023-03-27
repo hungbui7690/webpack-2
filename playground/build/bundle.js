@@ -1,1 +1,18 @@
-(()=>{var r={964:r=>{r.exports=(r,o)=>r+o}},o={};function t(e){var s=o[e];if(void 0!==s)return s.exports;var n=o[e]={exports:{}};return r[e](n,n.exports,t),n.exports}(()=>{const r=t(964)(10,5);console.log(r)})()})();
+;(() => {
+  var r,
+    o = {
+      964: (r) => {
+        r.exports = function (r, o) {
+          return r + o
+        }
+      },
+    },
+    t = {}
+  ;(r = (function r(e) {
+    var n = t[e]
+    if (void 0 !== n) return n.exports
+    var s = (t[e] = { exports: {} })
+    return o[e](s, s.exports, r), s.exports
+  })(964)(10, 5)),
+    console.log(r)
+})()

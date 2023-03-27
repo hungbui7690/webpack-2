@@ -1,0 +1,3 @@
+{
+  "presets": ["@babel/preset-env"] // check package.json for correct package name
+}
