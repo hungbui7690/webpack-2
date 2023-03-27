@@ -1,15 +1,23 @@
 /*
-  Handling CSS with Webpack
-  - loader
-  - pic
+  The Style and CSS Loaders
+  - create styles/image_viewer.css
+  - import 
 
-  - create image_view.js
-  - import in index.js > to let webpack knows and builds this file
+  (***) without config, webpack cannot recognize .css file
+    > need to install 2 packages: 
+      + css-loader
+      + style-loader
+
+  > npm install --save-dev css-loader style-loader
+  - webpack.config.js
+
+  (***) after build, we inspect > webpack creates the style tag and add the style there
+    > we think that it will bundle into 1 single css file, but not > it will create a style tag and add the style there
 
 */
 
 import sum from './sum'
-import './image_viewer' // *** it's diff when import this file > actually, we don't import, but run that file
+import './image_viewer'
 
 const total = sum(10, 5)
 console.log(total)

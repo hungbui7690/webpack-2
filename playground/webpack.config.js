@@ -12,6 +12,12 @@ const config = {
         use: 'babel-loader',
         test: /\.js$/,
       },
+
+      // ***
+      {
+        use: ['style-loader', 'css-loader'], // css-loader will process, then it will be sent to style-loader
+        test: /\.css$/,
+      },
     ],
   },
 }
