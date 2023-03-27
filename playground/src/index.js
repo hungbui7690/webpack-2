@@ -1,7 +1,11 @@
 /*
-  Handling Images with Webpack P2
-  - add options 
+  Automatic Image Compression
+  - create assets/
+    > we have 2 images: big and small  
+  - import images and use
 
+
+  - build and check build/
 */
 
 import sum from './sum'

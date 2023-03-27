@@ -1,6 +1,14 @@
 import './styles/image_viewer.css'
 
-const image = document.createElement('img')
-image.src = 'https://picsum.photos/400'
+// ***
+import big from '../assets/big.jpg'
+import small from '../assets/small.jpg'
 
-document.body.appendChild(image)
+// ***
+const smallImage = document.createElement('img')
+smallImage.src = small
+const bigImage = document.createElement('img')
+bigImage.src = big
+
+document.body.appendChild(smallImage)
+document.body.appendChild(bigImage)
